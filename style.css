@@ -1,0 +1,12 @@
+td{
+    color: seagreen;
+}
+p{
+    color: blue;
+}
+img{
+    margin-left:40%;
+}
+table, th,td{
+    border-collapse: collapse;
+}
