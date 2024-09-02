@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>When2Meet</h1>
+        <nav>
+            <li>
+                <a href="assignment2.html">Create event</a>
+            </li>
+            <li>
+                <a href="assignment2.html">Select Availability</a>
+            </li>
+            <li>
+                <a href="assignment2.html">View Results</a>
+            </li>
+            <li>
+                <a href="assignment2.html">Sign up</a>
+            </li>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+        <div>
+            <h2>Create Event</h2>
+            <label for="EventName">Event Name: </label>
+            <input type="text" name ="event" id="event" required>
+
+            <label for="EventDes">Event Description: </label>
+            <textarea name ="eventDes" id="eventDes"></textarea>
+
+            <label for="StartDate">Start Date: </label>
+            <input type="date", name="startDate", id="startDate">
+
+            <label for="EndDate">End Date: </label>
+            <input type="date", name="endDate", id="endDate">
+
+            <label for="TimeEncrament">TimeEncrament: </label>
+            <select name="TimeEncrament", id="TimeEncrament">
+                <option value="15 minutes">15 minutes</option>
+                <option value="30 30minutes">30 minutes</option>
+                <option value="45 minutes">45 minutes</option>
+                <option value="60 minutes">60 minutes</option>
+            </select>
+
+            <input type="button" value="Create Event">
+        </div>
+
+        <div>
+            <h2>Input Availability</h2>
+            <table>
+                <tr>
+                    <td><b>Time</td>
+                    <td><b>Monday</td>
+                    <td><b>Tuesday</td>
+                    <td><b>Wednesday</td>
+                    <td><b>Thursday</td>
+                    <td><b>Friday</td>
+                </tr>
+
+                <tr>
+                    <td>9:00 AM</td>
+                    <td><input type="checkbox" name="Monday", id="Monday"></td>
+                    <td><input type="checkbox" name="Tuesday", id="Tuesday"></td>
+                    <td><input type="checkbox" name="Wednesday", id="Wednesday"></td>
+                    <td><input type="checkbox" name="Thursday", id="Thursday"></td>
+                    <td><input type="checkbox" name="Friday", id="Friday"></td>
+                </tr>
+            </table>
+            <input type="button" value="Submit Availability">
+        </div>
+
+        <div>
+            <h2>View Results</h2>
+            <table>
+                <tr>
+                    <td><b>Time</td>
+                    <td><b>Monday</td>
+                    <td><b>Tuesday</td>
+                    <td><b>Wednesday</td>
+                    <td><b>Thursday</td>
+                    <td><b>Friday</td>
+                </tr>
+                <tr>
+                    <td>9:00 AM</td>
+                    <td>3 Availabe</td>
+                    <td>2 Availabe</td>
+                    <td>4 Availabe</td>
+                    <td>1 Availabe</td>
+                    <td>5 Availabe</td>
+                </tr>
+            </table>
+            <h3>sharable Link: <a href="https://www.when2meet.com/event?id=1234">https://www.when2meet.com/event?id=1234</a></h3>
+        </div>
+
+        <div>
+            <h2>Sign up</h2>
+            
+
+            <label for="Username"> Username: </label>
+            <input type="text", name="Username", id="Username">
+
+            <label for="Email">Email: </label>
+            <input type="text" name ="Email" id="Email"></textarea>
+
+            <label for="Password">Password: </label>
+            <input type="text", name="Password", id="Password">
+
+            <input type="button" value="Sign Up">
+        </div>
+        <div>
+            <h5>&copy; WhenToMeet. All rights reserved.</h5>
+        </div>
+    </main>
+</body>
+</html>

@@ -10,3 +10,14 @@ img{
 table, th,td{
     border-collapse: collapse;
 }
+
+
+header{
+    background-color: black;
+}
+main{
+    margin-top: 3%;
+}
+div{
+    width: 40%;
+}
