@@ -1,0 +1,10 @@
+div.image-preview{
+    border-radius: 3;
+    border-top: chartreuse;
+    display: inline;
+    size: 50%;
+}
+p{
+    text-align: center;
+    size: 100;
+}
