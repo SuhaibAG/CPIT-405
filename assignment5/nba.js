@@ -35,3 +35,39 @@ const nbaTeams = {
         "Oklahoma City Thunder"
     ]
 };
+
+
+const teamInputElement = document.getElementById("teamInput");
+const wonTableBody = document.getElementById("wonTableBody");
+const neverWonTableBody = document.getElementById("neverWonTableBody");
+
+teamInputElement.addEventListener("keyup", function handleAddTeam(e){ 
+    if(e.key === 'Enter'){
+        console.log("You hit enter");
+        const team = teamInputElement.value;
+        console.log(team);
+
+        if(nbaTeams.won.hasOwnProperty(team)){
+            addTeamRow(team, wonTableBody);
+        }
+
+        else if(nbaTeams.neverWon.includes(team)){
+            addTeamRow(team, neverWonTableBody);
+         }
+
+         else{
+            alert(`${team} does not exist`);
+         }
+
+    }
+});
+
+
+function addTeamRow(team, tbodyElem){
+    console.log(`We will add ${team} to ${tbodyElem}`)
+    const row = tbodyElem.insertRow();
+    row.insertCell(0).innerText = team;
+    if(tbodyElem == wonTableBody){
+        row.insertCell(1).innerText = nbaTeams.won[team].join(",");
+    }
+}
