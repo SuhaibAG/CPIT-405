@@ -12,12 +12,19 @@ li a{
     border: 1px, black, solid;
 }
 
-
-nav ul li {
-    display: inline;
-    border-left: 1px;
+nav ul{
+    margin-left: auto;
+    margin-right: auto;
 }
-
+nav ul li {
+    display: inline-block;
+    height: 100%;
+}
+li img{
+    width: 25px;
+    height: 25px;
+    height: 100%;    
+}
 li{
     align-items: right;
     text-align: center;
@@ -29,6 +36,17 @@ li input{
     padding: 6px;
     text-align: center;
     height: 20px;
+}
+
+li.Sign{
+    margin-right: 8%;
+}
+li.Search{
+    margin-right: 30%;
+}
+
+li.myurls{
+    margin-right: 8%;
 }
 
 
