@@ -1,0 +1,29 @@
+#main-box{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border: 1px, solid, black;
+    padding: 1%;
+}
+#search-area{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin: 5%;
+
+}
+#result{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: auto;
+    
+    width: fit-content;
+}
+
+#city, #temp, #wind{
+    size: 5px;
+}
