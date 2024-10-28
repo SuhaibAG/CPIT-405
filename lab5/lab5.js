@@ -442,18 +442,23 @@ const data = [
     }
 ];
 
-
+const tableBody = document.getElementById("player-rows");
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
-    const tableBody = document.getElementById("player-rows");
+
   
 
     function populateTable(players){
         tableBody.innerHTML = '';   
-        players.array.forEach(player => {
+        players.forEach(player => {
+            
             const row = document.createElement("tr");
-            row.innerHTML = `<td>${player.name}<td>`;
+            row.innerHTML = `<td>${player.name}</td>
+            <td>${player.team}</td>
+            <td>${player.points}</td>
+            <td>${player.rebounds}</td>
+            <td>${player.assists}</td>`;
             tableBody.appendChild(row);
         });
     }
@@ -461,15 +466,29 @@ document.addEventListener("DOMContentLoaded", ()=>{
     populateTable(data)
 
 })
+const search = document.getElementById("search");
 
-function addrow(team, tbodyElem){
-    console.log(`We will add ${team} to ${tbodyElem}`)
-    const row = tbodyElem.insertRow();
-    row.insertCell(0).innerText = team;
-    if(tbodyElem == wonTableBody){
-        row.insertCell(1).innerText = nbaTeams.won[team].join(",");
+
+
+search.addEventListener("keyup", function checkCity(e){
+    if(e.key === "Enter"){
+        let searchInput = search.value.trim().toLowerCase();
+
+        let players = data
+        tableBody.innerHTML = "";
+        players.forEach(player => {
+            if(player.name.toLowerCase().includes(searchInput)){
+                console.log(player.name)
+                console.log(searchInput)
+                const row = document.createElement("tr");
+                row.innerHTML = `<td>${player.name}</td>
+                <td>${player.team}</td>
+                <td>${player.points}</td>
+                <td>${player.rebounds}</td>
+                <td>${player.assists}</td>`;
+                tableBody.appendChild(row);
+            }
+        });
     }
-}
-function filterByPlayer(){
-    let
-}
+})
+
