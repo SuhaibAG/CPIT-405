@@ -478,8 +478,6 @@ search.addEventListener("keyup", function checkCity(e){
         tableBody.innerHTML = "";
         players.forEach(player => {
             if(player.name.toLowerCase().includes(searchInput)){
-                console.log(player.name)
-                console.log(searchInput)
                 const row = document.createElement("tr");
                 row.innerHTML = `<td>${player.name}</td>
                 <td>${player.team}</td>
